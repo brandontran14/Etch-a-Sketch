@@ -1,3 +1,4 @@
+//global variables
 const container = document.getElementById("container");
 const resetbtn = document.getElementById("reset");
 const btnselections = Array.from(document.querySelectorAll(".selections"));
@@ -23,7 +24,6 @@ function makerows(rowscols){
     }
     return;
 }
-
 
 //draw with a black color
 function drawblack(e){
@@ -77,7 +77,3 @@ btnselections.forEach(el => el.addEventListener('click',function(e){
     return;
     })
 );
-
-
-// gridelements.forEach(griditem => griditem.addEventListener('mouseover',colorchooser));
-// resetbtn.addEventListener('click',resetall);
