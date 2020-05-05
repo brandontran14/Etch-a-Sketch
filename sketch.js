@@ -46,7 +46,11 @@ function drawshade(e){
     return;
 }
 
-
+//eraser
+function eraser(e){
+    e.target.style.backgroundColor = '';
+    return;
+}
 
 //Function for changing colors or drawing 
 btnselections.forEach(el => el.addEventListener('click',function(e){
@@ -55,17 +59,26 @@ btnselections.forEach(el => el.addEventListener('click',function(e){
         case ("black"):
             gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawrand));
             gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawshade));
+            gridelements.forEach(griditem => griditem.removeEventListener('mouseover',eraser));
             gridelements.forEach(griditem => griditem.addEventListener('mouseover',drawblack));
             break;
         case ("random"):
             gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawblack));
             gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawshade));
+            gridelements.forEach(griditem => griditem.removeEventListener('mouseover',eraser));
             gridelements.forEach(griditem => griditem.addEventListener('mouseover',drawrand));
             break;
         case("shade"):
             gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawblack));
             gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawrand));
+            gridelements.forEach(griditem => griditem.removeEventListener('mouseover',eraser));
             gridelements.forEach(griditem => griditem.addEventListener('mouseover',drawshade));
+            break;
+        case("erase"):
+            gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawblack));
+            gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawrand));
+            gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawshade));
+            gridelements.forEach(griditem => griditem.addEventListener('mouseover',eraser));
             break;
         case("reset"):
             gridelements.forEach(griditem => griditem.removeEventListener('mouseover',drawblack));

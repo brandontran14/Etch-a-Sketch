@@ -10,17 +10,16 @@
 
 <body>
 <!--Code goes here-->
-    <div style = "grid-area: header">
-        <button id="reset" class="selections">Reset</button>
-        <button id="random" class="seopenlections">Random</button>
-        <button id="black" class="selections">Black</button>
-        <button id="shade" class="selections">Shade</button>
-    </div>
-    
-
-    <div class="footer" style = "grid-area: footer">The Footer</div>
+    <div style = "grid-area: header" class = "header">Etch-a-Sketch</div>
+    <div class="footer" style = "grid-area: footer"><a href="https://github.com/brandontran14"> <img src="https://avatars0.githubusercontent.com/u/9919?s=280&v=4" width="25" height="25"></a>Brandon Tran </div>
     <div class = "left" style = "grid-area: left"></div>
-    <div class = "right" style = "grid-area: right"></div>
+    <div class = "right" style = "grid-area: right">
+        <button id="reset" class="selections" title="Press to reset grid">Reset</button>
+        <button id="random" class="selections" title="Random colors">Random</button>
+        <button id="black" class="selections">Black</button>
+        <button id="shade" class="selections" title="Each pass gets darker">Shade</button>
+        <button id="erase" class="selections">Eraser</button>
+    </div>
     <div class = "middle" id = "container" style="grid-area: middle"></div>
 </body>
 <!-- JS source-->
